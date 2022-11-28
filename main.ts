@@ -159,12 +159,12 @@ function countNeighborsTopLeft () {
 }
 function countNeighborsWrapRight (currentRow: number, currentCol: number) {
     neighborCount = 0
-    neighborCount += copyLeft(currentRow + 1)
-    neighborCount += grid[currentRow - 1][0 + 0]
-    neighborCount += grid[currentRow - 1][0 - 1]
-    neighborCount += grid[currentRow - 0][0 - 1]
-    neighborCount += grid[currentRow + 1][0 - 1]
-    neighborCount += grid[currentRow + 1][0 + 0]
+    neighborCount += copyLeft(currentRow - 1)
+    neighborCount += grid[currentRow - 1][currentCol + 0]
+    neighborCount += grid[currentRow - 1][currentCol - 1]
+    neighborCount += grid[currentRow - 0][currentCol - 1]
+    neighborCount += grid[currentRow + 1][currentCol - 1]
+    neighborCount += grid[currentRow + 1][currentCol + 0]
     neighborCount += copyLeft(currentRow + 1)
     neighborCount += copyLeft(currentRow + 0)
     return neighborCount
